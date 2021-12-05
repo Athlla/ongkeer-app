@@ -1,0 +1,76 @@
+@use 'styles/breakpoints' as *;
+
+.Home {
+  @include container;
+  padding-top: 48px;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+
+  @include medium {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .Tag {
+    padding: 0 32px;
+    margin-bottom: 8px;
+
+    @include medium {
+      width: 40%;
+      padding: 0;
+    }
+
+    .Title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 48px;
+
+      @include large {
+        font-size: 3rem;
+      }
+
+      .Logo {
+        border-bottom: 5px dashed black;
+      }
+    }
+
+    .Button {
+      border: none;
+      width: 240px;
+      height: 54px;
+      text-align: left;
+      padding-left: 16px;
+      background: black;
+      color: white;
+      font-weight: bold;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+
+      &:hover,
+      &:active {
+        .Arrow {
+          transform: translateX(10px);
+        }
+      }
+
+      .Arrow {
+        width: 24px;
+        height: 24px;
+        transition: all 200ms linear;
+      }
+    }
+  }
+
+  .Image {
+    width: 100%;
+    object-fit: contain;
+
+    @include medium {
+      width: 60%;
+    }
+  }
+}

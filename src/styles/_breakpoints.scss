@@ -1,0 +1,34 @@
+$small: 640px;
+$medium: 768px;
+$large: 1024px;
+
+@mixin small {
+  @media (min-width: $small) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: $medium) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: $large) {
+    @content;
+  }
+}
+
+@mixin container {
+  margin: auto;
+  width: 100%;
+  max-width: $small;
+
+  @include medium {
+    max-width: $medium;
+  }
+  @include large {
+    max-width: $large;
+  }
+}
