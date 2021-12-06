@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 
 import Header from 'components/Header';
 import Input from 'components/Input';
+import Cost from 'components/CostData';
 
 import ICost from 'Interfaces/Cost';
 import styles from './styles/CekOngkir.module.scss';
@@ -75,26 +76,16 @@ const CekOngkir = () => {
               type="submit"
               className={styles.Submit}
               onClick={submitHandler}
+              disabled={origin === '' || destination === ''}
             >
               Cek
             </button>
           </div>
         </div>
-        {/* asdfasd */}
+        {costData && <Cost {...costData} />}
       </main>
     </>
   );
 };
 
 export default CekOngkir;
-
-{
-  /* <input type="text" placeholder="Asal" />
-<input type="text" placeholder="Tujuan" />
-<input type="number" placeholder="Berat" />
-<select>
-  <option value="jne">JNE</option>
-  <option value="pos">Pos Indonesia</option>
-  <option value="tiki">TIKI</option>
-</select> */
-}

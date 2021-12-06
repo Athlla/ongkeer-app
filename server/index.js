@@ -26,8 +26,6 @@ app.get('/city', async (req, res) => {
 app.post('/cost', (req, res) => {
   const { origin, destination, weight, courier } = req.body;
 
-  console.log(req.body);
-
   axios
     .request({
       url: 'https://api.rajaongkir.com/starter/cost',
