@@ -1,6 +1,6 @@
 @use 'styles/breakpoints' as *;
 
-.Home {
+.Container {
   @include container;
   padding-top: 48px;
   min-height: 70vh;

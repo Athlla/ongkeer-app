@@ -1,0 +1,60 @@
+@use 'styles/breakpoints' as *;
+
+.Container {
+  @include container;
+  padding-top: 48px;
+
+  .Main {
+    display: flex;
+
+    .Image {
+      width: 65%;
+    }
+
+    .Content {
+      width: 35%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .Berat {
+        width: 100%;
+        display: flex;
+        border: 1px solid black;
+
+        input {
+          flex: 1;
+          border: none;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        span {
+          padding-right: 6px;
+        }
+      }
+
+      input {
+        padding-left: 8px;
+      }
+
+      .Submit {
+        background: black;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-weight: 600;
+        cursor: pointer;
+        color: white;
+        border: none;
+        padding: 10px 0;
+
+        &:hover,
+        &:active {
+          background: #383838;
+        }
+      }
+    }
+  }
+}

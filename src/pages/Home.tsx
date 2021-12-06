@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      <main className={styles.Home}>
+      <main className={styles.Container}>
         <div className={styles.Tag}>
           <h1 className={styles.Title}>
             Cek ongkos kirim dari berbagai macam ekspedisi ? <br />
