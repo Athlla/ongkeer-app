@@ -39,6 +39,7 @@ const Input = ({ placeholder, onClick, wrap }: Props) => {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
+    // eslint-disable-next-line
   }, []);
 
   const handleClickOutside = (e: any) => {
